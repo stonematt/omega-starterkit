@@ -2,7 +2,7 @@ import onionGpio
 import time
 
 # specify sleep duration to be used in the program
-sleepTime = 0.5
+sleepTime = 0.15
 
 # create and populate a list to hold the GPIO pin numbers that control the LEDs
 gpioPins = [0, 1, 2, 3, 18, 19]
@@ -26,8 +26,10 @@ for gpioElement in gpioPins:
 # create a variable to hold the value of the LED
 ledValue     = 1
 
-# infinite loop - runs main program code continuously
-while 1:
+# run the loop 4 times
+n = 0
+print n
+while n < 4:
     # program all of the GPIOs to the ledValue
     for gpio in gpioObjects:
         gpio.setValue(ledValue)
@@ -39,3 +41,6 @@ while 1:
         ledValue = 0
     else:
         ledValue = 1
+
+    n += 1
+    print n
