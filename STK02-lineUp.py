@@ -28,7 +28,6 @@ ledValue     = 1
 
 # run the loop 4 times
 n = 0
-print n
 while n < 4:
     # program all of the GPIOs to the ledValue
     for gpio in gpioObjects:
@@ -43,4 +42,4 @@ while n < 4:
         ledValue = 1
 
     n += 1
-    print n
+
