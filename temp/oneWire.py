@@ -9,7 +9,7 @@ setupDelay = 3
 oneWireDir = "/sys/devices/w1_bus_master1"
 paths = {
     "slaveCount": oneWireDir + "/w1_master_slave_count",
-    "slaves": oneWireDir + "/w1_master_slaves"        
+    "slaves": oneWireDir + "/w1_master_slaves"
 }
 
 ## a bunch of functions to be used by the OneWire class
@@ -99,7 +99,7 @@ class OneWire:
         if not checkRegistered(self.address):
             # device is not recognized by the kernel
             print "Device is not registered on the bus."
-            return False                        
+            return False
 
         # the device has been properly set up
         return True
