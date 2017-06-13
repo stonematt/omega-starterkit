@@ -13,10 +13,8 @@ oneWireGpio = 19 # set the sensor GPIO
 print len(sys.argv)
 if len(sys.argv) == 1:
     pollingInterval = 300 #if no command line argument, use 300s
-    print "Polling at " + str(pollingInterval) + "s" 
 else:
     pollingInterval = float(sys.argv[1])
-    print "Polling at " + str(pollingInterval) + "s" 
 
 def __main__():
     # check if 1-Wire is setup in the kernel
