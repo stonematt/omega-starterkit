@@ -1,11 +1,13 @@
 # import modules and classes
 import time
+from datetime import datetime
 from temperatureSensor import TemperatureSensor
 import oneWire
 
 # setup onewire and polling interval
 oneWireGpio = 19 # set the sensor GPIO
 pollingInterval = 1 # seconds
+#pollingInterval = 300 # seconds
 
 def __main__():
     # check if 1-Wire is setup in the kernel
@@ -27,7 +29,8 @@ def __main__():
     while 1:
         # check and print the temperature
         value = sensor.readValue()
-        print "T = " + str(value) + " C"
+        # print "T = " + str(value) + " C"
+        print str(datetime.now()) + " , " + str(value) + " C"
         time.sleep(pollingInterval)
 
 if __name__ == '__main__':
